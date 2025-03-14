@@ -1,34 +1,88 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Джастин Тимберлейк</title>
+    <title>Jinx</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
-        <h1>Джастин Тимберлейк</h1>
-        <p>Музыкант, актер и певец поп-музыки</p>
-    </header>
-    <section>
-        <article>
-            <img src="https://cdn.britannica.com/95/218595-050-DJ-Timberlake-2014.jpg" alt="Джастин Тимберлейк">
-            <h2>Карьера</h2>
-            <p>Джастин Тимберлейк - американский музыкант, актер и певец поп-музыки, родившийся 31 января 1981 года в Мемфисе, штат Теннесси. Он известен своими успешными сольными альбомами и многими поп-хитами.</p>
-            <h3>Некоторые из его самых известных композиций:</h3>
+        <h1>Джинкс из Arcane</h1>
+        <nav>
             <ul>
-                <li>"Can't Stop the Feeling!"</li>
-                <li>"Suit & Tie"</li>
-                <li>"Mirrors"</li>
-                <li>"Lock Down"</li>
+                <li><a href="#about">О персонаже</a></li>
+                <li><a href="#abilities">Способности</a></li>
+                <li><a href="#gallery">Галерея</a></li>
+                <li><a href="#video">Видео</a></li>
             </ul>
-            <p>Для получения более подробной информации о Джастине Тимберлейке вы можете посетить его <a href="https://www.justintimberlake.com/" target="_blank">официальный сайт</a>.</p>
-        </article>
-    </section>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>О Джинкс</h2>
+            <p>
+                Джинкс (англ. Jinx), урождённая Паудер (англ. Powder) — вымышленный персонаж из игры <a
+                    href="https://www.leagueoflegends.com/ru-ru/" target="_blank">League of
+                    Legends</a>, разработанной Riot Games, а также мультсериала <a
+                    href="https://www.arcane.com/en-us/" target="_blank">«Аркейн»</a> 2021 года, производства
+                Netflix.
+                Прозванная Безбашенной хулиганкой за свой маниакальный и импульсивный характер, Джинкс является
+                преступницей из Зауна, а также младшей сестрой и заклятым врагом пилтоверского миротворца Вай.
+                Будучи опытным стрелком и изобретателем, Джинкс обладает обширным боевым арсеналом, включая:
+                огнестрельное оружие, взрывчатые вещества и высокотехнологичные устройства.
+            </p>
+            <p>
+                Героиня получила широкое признание среди критиков и фанатов игры. С выходом «Аркейн», Джинкс
+                закрепила свой статус одного из самых популярных персонажей франшизы League of Legends.
+            </p>
+            <img src="sources\jinx.jpg" alt="Jinx" class="responsive-image">
+        </section>
+
+        <section id="abilities">
+            <h2>Способности</h2>
+            <ul>
+                <li>Точность: Джинкс считается отличным стрелком. Она может перестрелять Майло в тренировочном
+                    симуляторе и победить Экко, когда они играют вместе. Она, как правило, предпочитает пистолеты, но
+                    также используется пистолет Гатлинга.</li>
+                <li>Изобретения: Пока она была под именем Паудер, она боролась с созданием рабочих изобретений. По мере
+                    взросления она становилась все более искусной в изобретении оружия, в частности бомб.
+                    Подразумевается, что она производила большую часть оружия, используемого бандой Силко.</li>
+                <li>Усиленная телесность мерцания: Благодаря использованию Мерцания, Джинкс теперь обладает различными
+                    сверхчеловеческими атрибутами ценой своего и без того шаткого психического здоровья. В частности,
+                    это сверхчеловеческая сила, выносливость, ловкость и эффективный фактор исцеления. Особенно это
+                    влияет на ее скорость, позволяя ей использовать молниеносный шаг для уклонения от атак в бою.</li>
+            </ul>
+        </section>
+
+        <section id="gallery">
+            <h2>Галерея</h2>
+            <div class="gallery">
+                <img src="sources\jinx-final.jpg" alt="Джинкс финал">
+                <img src="sources\jinx-and-ekko2.jpg" alt="Джинкс и Экко">
+                <img src="sources\jinx-and-ekko.jpg" alt="Джинкс и Экко перед поцелуем">
+                <img src="sources\sad-jinx.jpg" alt="Джинкс грустная">
+            </div>
+        </section>
+
+        <section id="video">
+            <h2>Видео</h2>
+            <div class="video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/qhs5DTaOzHU?si=CjS40qP8t6asNVkO"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+    </main>
+
     <footer>
-        <button id="changeColorButton">Изменить цвет фона</button>
+        <button id="theme-toggle">Сменить тему</button>
     </footer>
     <script src="script.js"></script>
 </body>
+
 </html>

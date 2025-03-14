@@ -1,5 +1,15 @@
-document.getElementById('changeColorButton').addEventListener('click', function() {
-    const colors = ['#ffcc00', '#e6b800', '#ff9900', '#cc8400', '#b36b00'];
-    const randomColor = colors[Math.floor(Math.random() * colors.length)];
-    document.body.style.backgroundColor = randomColor;
+const themeToggle = document.getElementById('theme-toggle');
+const body = document.querySelector(".container")
+let isDarkTheme = false;
+
+themeToggle.addEventListener('click', () => {
+  if (isDarkTheme) {
+    document.body.style.backgroundColor = '#f4f4f4';
+    document.body.style.color = '#333';
+    isDarkTheme = false;
+  } else {
+    document.body.style.backgroundColor = '#333';
+    document.body.style.color = '#f4f4f4';
+    isDarkTheme = true;
+  }
 });
