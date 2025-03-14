@@ -39,23 +39,52 @@ header nav a {
     height: auto;
     display: block;
     margin: 1rem auto;
+    align-self: center;
   }
 
-.gallery {
+.slider {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-inline-size: 600px;
+    inline-size: 100%;
+    position: relative;
+}
+
+.controls {
+    margin-block-end: 20px;
+}
+
+.gallery {
+    inline-size: 100%;
+    /* display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
+    flex-wrap: wrap; */
 }
 
-.gallery img {
-    width: 45%;
-    margin: 1rem 0;
-    transition: transform 0.3s ease;
+.slide {
+    display: none;
+    text-align: center;
+  }
+
+.slide img {
+    display: block;
+    inline-size: 100%;
+    block-size: 225px;
+    max-block-size: 225px;
+    object-fit: cover;
+    /* width: 45%;
+    margin: 1em 0;
+    transition: transform 0.3s ease; */
 }
 
-.gallery img:hover {
+.gallery--active {
+    display: block;
+}
+
+/* .gallery img:hover {
     transform: scale(1.1);
-}
+} */
 
 footer {
     text-align: center;
@@ -64,26 +93,59 @@ footer {
     color: #fff;
 }
 
-button {
+.button {
+    cursor: pointer;
+}
+
+.theme-toggle {
     display: block;
     margin: 1rem auto;
     padding: 0.5em 1em;
-    background-color: #333;
-    color: #fff;
+    background-color: #fff;
+    color: #000;
     border: none;
-    cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #555;
+.theme-toggle:hover {
+    background-color: #9b9b9b;
+}
+
+.button-prev,
+.button-next {
+  position: absolute;
+  inset-block-start: 50%;
+  transform: translateY(-50%);
+  border: none;
+  inline-size: 30px;
+  block-size: 42px;
+  background-color: transparent;
+  background-image: url(sources\reshot-icon-arrow-chevron-right-WDGHUKQ634.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.button-prev[aria-disabled="true"],
+.button-next[aria-disabled="true"] {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.button-prev {
+  inset-inline-start: -50px;
+}
+
+.button-next {
+  inset-inline-end: -50px;
+  transform: translateY(-50%) rotateY(180deg);
+  transform-origin: center;
 }
 
 /* Десктопная версия */
 @media (min-width: 1024px) {
-    .gallery img {
+    /* .gallery img {
         width: 30%;
-    }
+    } */
 }
 
 /* Мобильная версия */
@@ -95,15 +157,15 @@ button:hover {
     }
 
     header nav ul li {
-        margin: 0.5rem 0;
+        margin: 0.5em 0;
     }
 
-    .gallery {
+    /* .gallery {
         flex-direction: column;
         align-items: center;
-    }
+    } */
 
-    .gallery img {
+    /* .gallery img {
         width: 80%;
-    }
+    } */
 }

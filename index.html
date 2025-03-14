@@ -27,8 +27,8 @@
             <p>
                 Джинкс (англ. Jinx), урождённая Паудер (англ. Powder) — вымышленный персонаж из игры <a
                     href="https://www.leagueoflegends.com/ru-ru/" target="_blank">League of
-                    Legends</a>, разработанной Riot Games, а также мультсериала <a
-                    href="https://www.arcane.com/en-us/" target="_blank">«Аркейн»</a> 2021 года, производства
+                    Legends</a>, разработанной Riot Games, а также мультсериала <a href="https://www.arcane.com/en-us/"
+                    target="_blank">«Аркейн»</a> 2021 года, производства
                 Netflix.
                 Прозванная Безбашенной хулиганкой за свой маниакальный и импульсивный характер, Джинкс является
                 преступницей из Зауна, а также младшей сестрой и заклятым врагом пилтоверского миротворца Вай.
@@ -58,13 +58,29 @@
             </ul>
         </section>
 
-        <section id="gallery">
+        <section id="gallery" aria-live="polite">
             <h2>Галерея</h2>
-            <div class="gallery">
-                <img src="sources\jinx-final.jpg" alt="Джинкс финал">
-                <img src="sources\jinx-and-ekko2.jpg" alt="Джинкс и Экко">
-                <img src="sources\jinx-and-ekko.jpg" alt="Джинкс и Экко перед поцелуем">
-                <img src="sources\sad-jinx.jpg" alt="Джинкс грустная">
+            <div class="slider" role="region" aria-label="Паттерны">
+                <div class="controls" role="group" aria-label="Управление слайдами">
+                    <button aria-label="Предыдущий" type="button" class="button button-prev">
+                    </button>
+                    <button aria-label="Следующий" type="button" class="button button-next">
+                    </button>
+                </div>
+                <div class="gallery">
+                    <div class="slide" role="group" id="carousel-item-1">
+                        <img src="sources\jinx-final.jpg" alt="Джинкс финал">
+                    </div>
+                    <div class="slide" role="group" id="carousel-item-2">
+                        <img src="sources\jinx-and-ekko2.jpg" alt="Джинкс и Экко">
+                    </div>
+                    <div class="slide" role="group" id="carousel-item-3">
+                        <img src="sources\jinx-and-ekko.jpg" alt="Джинкс и Экко перед поцелуем">
+                    </div>
+                    <div class="slide" role="group" id="carousel-item-4">
+                        <img src="sources\sad-jinx.jpg" alt="Джинкс грустная">
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -80,7 +96,7 @@
     </main>
 
     <footer>
-        <button id="theme-toggle">Сменить тему</button>
+        <button id="theme-toggle" class="button theme-toggle">Сменить тему</button>
     </footer>
     <script src="script.js"></script>
 </body>
