@@ -51,22 +51,6 @@ header nav a {
     margin: 1rem auto;
   }
 
-/* .gallery {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.gallery img {
-    width: 45%;
-    margin: 1rem 0;
-    transition: transform 0.3s ease;
-} */
-
-.gallery img:hover {
-    transform: scale(1.1);
-}
-
 footer {
     text-align: center;
     padding: 1em;
@@ -97,6 +81,7 @@ footer {
     max-width: 600px;
     width: 100%;
     overflow: hidden;
+    align-self: center;
 }
 
 .gallery {
@@ -138,31 +123,39 @@ footer {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Десктопная версия */
-/* @media (min-width: 1024px) {
-    .gallery img {
-        width: 30%;
-    }
-} */
-
 /* Мобильная версия */
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
     header nav ul {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-
     header nav ul li {
         margin: 0.5rem 0;
     }
-
-    .gallery {
-        flex-direction: column;
-        align-items: center;
+    .slider {
+        max-width: 100%;
+        border: none;
+        border-radius: 0;
     }
 
-    .gallery img {
-        width: 80%;
+    .slider-btn {
+        font-size: 20px; 
+        padding: 8px;
     }
-} */
+
+    .slider-btn-left {
+        left: 5px;
+    }
+
+    .slider-btn-right {
+        right: 5px;
+    }
+}
+
+/* Десктопная версия */
+@media(min-width: 1024px) {
+    .gallery img:hover {
+        transform: scale(1.1);
+    }
+}
