@@ -48,7 +48,7 @@ header nav a {
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 1rem auto;
+    margin: 1em auto;
   }
 
 footer {
@@ -60,7 +60,7 @@ footer {
 
 .theme-toggle {
     display: block;
-    margin: 1rem auto;
+    margin: 1em auto;
     padding: 0.5em 1em;
     background-color: #fff;
     color: #000;
@@ -81,7 +81,7 @@ footer {
     max-width: 100%;
     height: auto;
     overflow: hidden;
-    margin: auto;
+    margin: 1em auto;
 }
 
 .gallery {
@@ -131,7 +131,7 @@ footer {
         align-items: center;
     }
     header nav ul li {
-        margin: 0.5rem 0;
+        margin: 0.5em 0;
     }
     .slider {
         border: none;
