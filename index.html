@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
+<body class="container">
     <header>
         <h1>Джинкс из Arcane</h1>
         <nav>
@@ -58,29 +58,17 @@
             </ul>
         </section>
 
-        <section id="gallery" aria-live="polite">
+        <section id="gallery">
             <h2>Галерея</h2>
-            <div class="slider" role="region" aria-label="Паттерны">
-                <div class="controls" role="group" aria-label="Управление слайдами">
-                    <button aria-label="Предыдущий" type="button" class="button button-prev">
-                    </button>
-                    <button aria-label="Следующий" type="button" class="button button-next">
-                    </button>
-                </div>
+            <div class="slider">
+                <button class="slider-btn slider-btn-left">&#10094;</button>
                 <div class="gallery">
-                    <div class="slide" role="group" id="carousel-item-1">
-                        <img src="sources\jinx-final.jpg" alt="Джинкс финал">
-                    </div>
-                    <div class="slide" role="group" id="carousel-item-2">
-                        <img src="sources\jinx-and-ekko2.jpg" alt="Джинкс и Экко">
-                    </div>
-                    <div class="slide" role="group" id="carousel-item-3">
-                        <img src="sources\jinx-and-ekko.jpg" alt="Джинкс и Экко перед поцелуем">
-                    </div>
-                    <div class="slide" role="group" id="carousel-item-4">
-                        <img src="sources\sad-jinx.jpg" alt="Джинкс грустная">
-                    </div>
+                    <img src="sources\jinx-final.jpg" alt="Джинкс финал" class="slider-img active">
+                    <img src="sources\jinx-and-ekko2.jpg" alt="Джинкс и Экко" class="slider-img">
+                    <img src="sources\jinx-and-ekko.jpg" alt="Джинкс и Экко перед поцелуем" class="slider-img">
+                    <img src="sources\sad-jinx.jpg" alt="Джинкс грустная" class="slider-img">
                 </div>
+                <button class="button slider-btn slider-btn-right">&#10095;</button>
             </div>
         </section>
 

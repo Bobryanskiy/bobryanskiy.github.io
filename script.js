@@ -1,87 +1,37 @@
-const themeToggle = document.getElementById('theme-toggle');
-const body = document.querySelector(".container")
-let isDarkTheme = false;
+const button = document.querySelector(".theme-toggle");
+const body = document.querySelector(".container");
 
-themeToggle.addEventListener('click', () => {
-    if (isDarkTheme) {
-        document.body.style.backgroundColor = '#f4f4f4';
-        document.body.style.color = '#333';
-        isDarkTheme = false;
-    } else {
-        document.body.style.backgroundColor = '#333';
-        document.body.style.color = '#f4f4f4';
-        isDarkTheme = true;
-    }
+button.addEventListener("click", () => {
+  body.classList.toggle("dark-mode");
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-    const slider = document.querySelector('.slider')
-    const slides = slider.querySelectorAll('.slide')
-    const activeSlides = 'slide--active'
-    const slideCount = slides.length
-    const controlButtons = slider.querySelectorAll('.button-radio')
-    const prevButton = slider.querySelector('.button-prev')
-    const nextButton = slider.querySelector('.button-next')
-    const activeButton = 'active'
-    const inactiveButton = 'aria-disabled'
-    const currentButton = 'aria-current'
-    let currentSlide = 0
+const images = document.querySelectorAll('.slider-img');
+const leftButton = document.querySelector('.slider-btn-left');
+const rightButton = document.querySelector('.slider-btn-right');
 
-    function updateSlider() {
-        slides.forEach((slide, index) => {
-            if (index === currentSlide) {
-                slide.classList.add(activeSlides)
-            } else {
-                slide.classList.remove(activeSlides)
-            }
-        })
+let currentIndex = 0;
 
-        controlButtons.forEach((button, index) => {
-            if (index === currentSlide) {
-                button.classList.add(activeButton)
-                button.setAttribute(currentButton, true)
-            } else {
-                button.classList.remove(activeButton)
-                button.removeAttribute(currentButton, true)
-            }
+function showImage(index) {
+    images.forEach(img => {
+        img.classList.remove('active');
+    });
 
-            prevButton.setAttribute(inactiveButton, currentSlide === 0)
-            nextButton.setAttribute(inactiveButton, currentSlide === slideCount - 1)
-        })
+    images[index].classList.add('active');
+}
+
+leftButton.addEventListener('click', () => {
+    currentIndex--;
+    if (currentIndex < 0) {
+        currentIndex = images.length - 1;
     }
+    showImage(currentIndex);
+});
+rightButton.addEventListener('click', () => {
+    currentIndex++;
+    if (currentIndex >= images.length) {
+        currentIndex = 0;
+    }
+    showImage(currentIndex);
+});
 
-    controlButtons.forEach((button, index) => {
-        button.addEventListener('click', () => {
-            if (index < slideCount) {
-                currentSlide = index
-                updateSlider()
-            }
-        })
-    })
-
-    prevButton.addEventListener('click', () => {
-        if (currentSlide > 0) {
-            currentSlide--
-            updateSlider()
-        }
-    })
-
-    nextButton.addEventListener('click', () => {
-        if (currentSlide < slideCount - 1) {
-            currentSlide++
-            updateSlider()
-        }
-    })
-
-    slider.addEventListener('keydown', function (event) {
-        if (event.key === 'ArrowLeft' && currentSlide > 0) {
-            currentSlide--
-            updateSlider()
-        } else if (event.key === 'ArrowRight' && currentSlide < slideCount - 1) {
-            currentSlide++
-            updateSlider()
-        }
-    })
-
-    updateSlider()
-})  
+showImage(currentIndex);
