@@ -78,7 +78,7 @@ footer {
 
 .slider {
     position: relative;
-    max-width: 600px;
+    max-width: 100%;
     height: auto;
     overflow: hidden;
     margin: auto;
@@ -150,6 +150,9 @@ footer {
 
     .slider-btn-right {
         right: 5px;
+    }
+    .video {
+        max-width: 100%;
     }
 }
 
