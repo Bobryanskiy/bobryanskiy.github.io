@@ -78,10 +78,10 @@ footer {
 
 .slider {
     position: relative;
-    max-width: 100%;
+    max-width: 600dx;
     height: auto;
     overflow: hidden;
-    margin: 1em auto;
+    align-items: center;
 }
 
 .gallery {
