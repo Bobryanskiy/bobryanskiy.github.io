@@ -78,7 +78,7 @@ footer {
 
 .slider {
     position: relative;
-    max-width: 600dx;
+    max-width: 600px;
     height: auto;
     overflow: hidden;
     align-items: center;
