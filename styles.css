@@ -81,12 +81,12 @@ footer {
     width: 700px;
     height: auto;
     overflow: hidden;
-    align-items: center;
 }
 
 .gallery {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    align-items: center;
 }
 
 .slider-img {
